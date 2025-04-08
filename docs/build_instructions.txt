@@ -1,0 +1,15 @@
+# Build Instructions for tkinterdnd2-universal
+
+1. Install dependencies:
+   - Install Python 3.x from https://www.python.org/
+   - Create a virtual environment and install required dependencies:
+     pip install -r requirements.txt
+
+2. Build the executable using PyInstaller:
+   - Run the following command to create a single executable:
+     pyinstaller main.py -F -w --icon=assets/icon.ico --additional-hooks-dir=.
+
+3. Additional Notes:
+   - tkinterdnd2-universal requires the hook-tkinterdnd2.py file (already included).
+   - source: https://pypi.org/project/tkinterdnd2-universal/
+   - hook: https://github.com/pmgagne/tkinterdnd2/blob/master/hook-tkinterdnd2.py
