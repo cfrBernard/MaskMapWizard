@@ -50,7 +50,7 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 ---
 
 ## How to Use:
-- Drag and Drop the Metallic, AO, Detail, and Smoothness textures into their respective fields.
+- Drag and Drop the Metallic, AO, Detail, and Smoothness textures into their respective fields. (If you don’t have a texture for one of the channels, leave it empty)
 - Select the Export Path where you want the final Mask Map to be saved.
 - Hit Build to create your combined Mask Map.
 - Check the Console for messages and updates.
@@ -58,22 +58,16 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 ---
 
 ## 🔮 What's Coming:
-- ### Support for other engines:
-  - I plan to introduce presets for different game engines, like Unreal Engine and custom engines, allowing users to configure the channel order (e.g., Roughness in Red, Metallic in Green).
 
-- ### Customizable Mask Map settings:
-  - Users will be able to invert Smoothness to Roughness, select channel order, and tweak other settings for greater flexibility.
-
-- ### Advanced Mapping Options:
-  - Support for defining exactly which maps go into which RGBA channels.
-
-- ### Future versions with improved UI:
-  - A more polished user interface with intuitive features and better error handling.
+- **Support for other engines:** Introducing presets for different game engines like Unreal Engine (ORM), with configurable channel order.
+- **Customizable Mask Map settings:** Ability to invert Smoothness to Roughness, select channel order, and tweak other settings for flexibility.
+- **Advanced Mapping Options:** Define exactly which maps go into which RGBA channels.
+- **Improved UI:** A more polished user interface with intuitive features and better error handling.
 
 ## Notes:
 - This tool is currently Unity HDRP-focused, but it will evolve to support more engines.
 - Feel free to contribute by adding engine-specific presets, new features, or bug fixes!
-- For additional tips, troubleshooting, and detailed instructions on how to use the app with Materialize, refer to the [tips & troubleshooting](docs/tips_troubleshooting.md) section.
+- For additional tips and troubleshooting, refer to the [tips & troubleshooting](docs/tips_troubleshooting.md) section.
 
 ## 🤝 Contact:
 For issues, suggestions, or contributions, feel free to open an issue on the GitHub repository.
