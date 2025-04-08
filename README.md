@@ -18,6 +18,12 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 
 ---
 
+<p align="center">
+  <img src="assets/demo/xWSHVzL8K2.png" alt="MaskMapWizard Demo" />
+</p>
+
+---
+
 ## Requirements:
 - Python 3.x
 - Pillow for image processing
