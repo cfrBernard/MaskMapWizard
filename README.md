@@ -24,7 +24,9 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 
 ---
 
-## Requirements:
+## 🛠 Development Setup
+
+### Requirements:
 - Python 3.x
 - Pillow for image processing
 - tkinterdnd2-universal for drag and drop
@@ -34,7 +36,7 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 
 ---
 
-## 🛠️ Installation:
+### Installation:
 1. Clone this repository or download the script:
     ```bash
     git clone https://github.com/cfrBernard/MaskMapWizard.git
