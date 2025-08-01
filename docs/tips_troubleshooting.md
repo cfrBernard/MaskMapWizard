@@ -4,7 +4,7 @@
 
 ## 🎨 Using with Materialize
 
-[**Materialize**](https://www.boundingboxsoftware.com/materialize/index.php) is a powerful tool for generating textures like AO, Metallic, and others. Here's how I personally use it to quickly generate masks for Unity's HDRP:
+[**Materialize**](http://boundingboxsoftware.com/materialize/) is a powerful tool for generating textures like AO, Metallic, and others. Here's how I personally use it to quickly generate masks for Unity's HDRP:
 
 1. Start with a base map texture.
 2. Use Materialize to generate your new textures (Metallic, AO, Smoothness).
