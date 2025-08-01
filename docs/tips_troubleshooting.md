@@ -29,7 +29,3 @@ You can drop a **Roughness** map in the Smoothness field — the app will ask if
 This ensures compatibility with Unity HDRP’s alpha channel convention (Smoothness = bright / glossy).
 
 ---
-
-## ⚠️ Troubleshooting
-- PNG Files from Unity: It's recommended to use PNG files that are already part of your Unity project. Other PNG files might cause errors or not be recognized as valid. (I don't know where it comes from yet)
-> ✅ Recommended: Always import your pngs from unity.

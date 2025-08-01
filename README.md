@@ -4,7 +4,7 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 
 [**Download the latest version here**](https://github.com/cfrBernard/MaskMapWizard/releases)
 
-![Version](https://img.shields.io/badge/version-v0.1.0-blue)
+![Version](https://img.shields.io/badge/version-v0.1.1-blue)
 ![License](https://img.shields.io/github/license/cfrBernard/MaskMapWizard)
 
 
