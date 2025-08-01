@@ -4,7 +4,7 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 
 [**Download the latest version here**](https://github.com/cfrBernard/MaskMapWizard/releases)
 
-![Version](https://img.shields.io/badge/version-v0.1.0-blue)
+![Version](https://img.shields.io/badge/version-v0.1.1-blue)
 ![License](https://img.shields.io/github/license/cfrBernard/MaskMapWizard)
 
 
@@ -76,6 +76,8 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 - This tool is currently Unity HDRP-focused, but it will evolve to support more engines.
 - Feel free to contribute by adding engine-specific presets, new features, or bug fixes!
 - For additional tips and troubleshooting, refer to the [tips & troubleshooting](docs/tips_troubleshooting.md) section.
+- For more information about the version, please refer to the [changelog](docs/CHANGELOG.md) section.
+- This project is licensed under the MIT License. See the [LICENSE](./LICENSE.md) file for details.
 
 ## 🤝 Contact:
 For issues, suggestions, or contributions, feel free to open an issue on the GitHub repository.

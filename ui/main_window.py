@@ -16,6 +16,13 @@ class MainWindow(TkinterDnD.Tk):
 
         self.create_ui()
     
+    def clean_path(self, path: str) -> str:
+        """Cleans paths coming from tkinterdnd2 (removes braces and spaces)"""
+        path = path.strip()
+        if path.startswith("{") and path.endswith("}"):
+            path = path[1:-1]
+        return path
+
     def create_ui(self):
         # Create rows for different map types (Metallic, AO, Detail, Smooth)
         self.create_row("MetallicMap", 0)
@@ -55,7 +62,7 @@ class MainWindow(TkinterDnD.Tk):
         drop_label.grid(row=row_number, column=1, padx=10, pady=5, sticky="nsew")
 
         drop_label.drop_target_register(DND_FILES)
-        drop_label.dnd_bind('<<Drop>>', lambda e, l=drop_label: l.config(text=e.data))
+        drop_label.dnd_bind('<<Drop>>', lambda e, l=drop_label: l.config(text=self.clean_path(e.data)))
 
         button = tk.Button(self, text="...", command=lambda: self.open_file_dialog(drop_label), font=("Arial", 10, "bold"), height=1, width=3)
         button.grid(row=row_number, column=2, padx=10, pady=5, sticky="nsew")
@@ -66,7 +73,7 @@ class MainWindow(TkinterDnD.Tk):
         # Open a file dialog to select a file
         file_path = filedialog.askopenfilename(title="Select a file")
         if file_path:
-            label.config(text=file_path)
+            label.config(text=self.clean_path(file_path))
 
     def reset_all(self):
         # Reset the UI (clear the paths and reset buttons)
@@ -102,7 +109,7 @@ class MainWindow(TkinterDnD.Tk):
         keys = ["Metallic", "AO", "Detail", "Smooth"]
     
         for key, label in zip(keys, self.drop_labels):
-            path = label.cget("text")
+            path = self.clean_path(label.cget("text"))
             input_paths[key] = path if os.path.exists(path) else None
     
         # Ask for confirmation if "Smooth" map is actually "Roughness"
