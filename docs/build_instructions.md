@@ -1,13 +1,11 @@
-# Build Instructions for MaskMapWizard
-
 ## 1. Build the executable using build.py
 
 This project now includes a build script that wraps PyInstaller with all required options.
 
 Run:
-```
-python build.py
-```
+
+    python build.py
+
 
 This will:
 - Clean previous `build/` and `dist/` directories.
@@ -28,5 +26,5 @@ For manual builds (not recommended):
 ---
 
 >## Source:  
->     - https://pypi.org/project/tkinterdnd2-universal/  
->     - Hook: https://github.com/pmgagne/tkinterdnd2/blob/master/hook-tkinterdnd2.py
+> - https://pypi.org/project/tkinterdnd2-universal/  
+> - Hook: https://github.com/pmgagne/tkinterdnd2/blob/master/hook-tkinterdnd2.py
