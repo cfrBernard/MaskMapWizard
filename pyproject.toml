@@ -1,0 +1,58 @@
+[project]
+name = "MaskMapWizard"
+version = "0.2.0"
+description = "Combining multiple textures into a single RGBA image"
+authors = [{ name = "C. Bernard", email = "cfr.bernard@yahoo.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "pillow",
+    "tkinterdnd2-universal"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyinstaller",
+    "pytest",
+    "mypy",
+    "ruff",
+    "black",
+    "pre-commit"
+]
+
+[project.scripts]
+MaskMapWizard = "MaskMapWizard.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["MaskMapWizard"]
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+show_error_codes = true
+pretty = true
+exclude = "^tests/fixtures/"
+
+[[tool.mypy.overrides]]
+module = ["tkinterdnd2-universal"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.black]
+line-length = 100
+target-version = ['py313']

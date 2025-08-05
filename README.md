@@ -4,7 +4,7 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 
 [**Download the latest version here**](https://github.com/cfrBernard/MaskMapWizard/releases)
 
-![Version](https://img.shields.io/badge/version-v0.1.1-blue)
+![Version](https://img.shields.io/badge/version-v0.2.0-blue)
 ![License](https://img.shields.io/github/license/cfrBernard/MaskMapWizard)
 
 
@@ -27,37 +27,51 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 ## 🛠 Development Setup
 
 ### Requirements:
-- Python 3.x
+- Python 3.11+
 - Pillow for image processing
 - tkinterdnd2-universal for drag and drop
 - tkinter for the GUI
 
-**Note**: `tkinter` comes pre-installed with Python on most systems.
+### Installation (Dev Mode):
+
+```
+git clone https://github.com/cfrBernard/MaskMapWizard.git
+cd MaskMapWizard
+```
+```
+pip install -e .
+# or
+pip install -e .[dev]
+```
+
+> **Note**: Using a .venv is highly recommended.
 
 ---
 
-### Installation:
-1. Clone this repository or download the script:
-    ```bash
-    git clone https://github.com/cfrBernard/MaskMapWizard.git
-    cd MaskMapWizard
-    ```
-2. Install the required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the app:
-    ```bash
-    python main.py
-    ```
+## Dev Tools
 
-<br>
+### Run the App:
 
-> For building the project into an executable, please refer to the [build instructions](docs/build_instructions.txt).
+```
+python -m MaskMapWizard
+```
+
+### Build the App:
+
+```
+python build.py
+```
+
+### Run pre-commit hooks:
+
+```
+pre-commit run --all-files
+```
 
 ---
 
 ## How to Use:
+
 - Drag and Drop the Metallic, AO, Detail, and Smoothness textures into their respective fields. (If you don’t have a texture for one of the channels, leave it empty)
 - Select the Export Path where you want the final Mask Map to be saved.
 - Hit Build to create your combined Mask Map.
@@ -78,6 +92,7 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 - For additional tips and troubleshooting, refer to the [tips & troubleshooting](docs/tips_troubleshooting.md) section.
 - For more information about the version, please refer to the [changelog](docs/CHANGELOG.md) section.
 - This project is licensed under the MIT License. See the [LICENSE](./LICENSE.md) file for details.
+- For additional build informations, refer to the [build_instructions](docs/build_instructions.md) file.
 
 ## 🤝 Contact:
 For issues, suggestions, or contributions, feel free to open an issue on the GitHub repository.

@@ -1,0 +1,13 @@
+# ruff.toml
+
+line-length = 100
+target-version = "py313"
+
+[lint]
+select = ["E", "F", "I", "B", "UP", "C4", "SIM", "TCH"]
+ignore = ["E501"]  # ignore la limite de ligne
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
