@@ -14,7 +14,7 @@
 
 ## Empty channels?
 
-If you don’t have a texture for one of the channels (Metallic, AO, etc.), leave it empty:  
+If you don’t have a texture for one of the channels (Metallic, AO, etc.), leave it empty:
 
 > The tool will fill it with pure black (0) by default.
 
@@ -25,7 +25,7 @@ This way, Unity interprets it as “no effect” for that channel, keeping your 
 ## Using Roughness instead of Smoothness?
 
 **No worries!**
-You can drop a **Roughness** map in the Smoothness field — the app will ask if you want to **invert** it to Smoothness.  
+You can drop a **Roughness** map in the Smoothness field — the app will ask if you want to **invert** it to Smoothness.
 This ensures compatibility with Unity HDRP’s alpha channel convention (Smoothness = bright / glossy).
 
 ---

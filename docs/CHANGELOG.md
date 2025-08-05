@@ -13,3 +13,20 @@
 - Obsolete troubleshooting note about "only using Unity PNG files" (no longer relevant).
 
 ---
+
+## [v0.2.0] - 2025-08-05
+### Refactor
+
+- **Project Restructure**
+  - Moved from flat `main.py` to modular package `src/MaskMapWizard/`.
+  - Separated logic into `core/`, `gui/`, and `utils/` folders.
+  - Introduced `build.py` to replace direct `pyinstaller` calls.
+
+### Build System
+- Simplified executable creation via `python build.py` (no more manual command).
+- Added automatic version detection from `pyproject.toml`.
+
+### Misc
+- Updated docs (`README`, `build_instructions`) to reflect new workflow.
+
+---

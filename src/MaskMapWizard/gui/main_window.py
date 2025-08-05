@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
 from tkinterdnd2 import DND_FILES, TkinterDnD
-from logic.maskmap_builder import build_mask_map
+from MaskMapWizard.core.utils import on_build_click
 from PIL import Image, ImageOps
 import os
 
@@ -39,7 +39,7 @@ class MainWindow(TkinterDnD.Tk):
         self.path_button.grid(row=5, column=0, padx=10, pady=5, sticky="nsew")
 
         # Build button
-        self.build_button = tk.Button(self, text="Build", command=self.on_build_click, font=("Arial", 10, "bold"), height=2, width=15)
+        self.build_button = tk.Button(self, text="Build", command=lambda: on_build_click(self), font=("Arial", 10, "bold"), height=2, width=15)
         self.build_button.grid(row=5, column=1, padx=10, pady=5, sticky="nsew")
 
         # Reset button
@@ -102,42 +102,6 @@ class MainWindow(TkinterDnD.Tk):
         inverted_img.save(inverted_image_path)
         print(f"Inverted image saved as: {inverted_image_path}")
         return inverted_image_path
-    
-    def on_build_click(self):
-        # Collect file paths for each map type
-        input_paths = {}
-        keys = ["Metallic", "AO", "Detail", "Smooth"]
-    
-        for key, label in zip(keys, self.drop_labels):
-            path = self.clean_path(label.cget("text"))
-            input_paths[key] = path if os.path.exists(path) else None
-    
-        # Ask for confirmation if "Smooth" map is actually "Roughness"
-        if input_paths["Smooth"]:
-            is_rough = self.ask_if_roughness()
-            if is_rough:
-                print("Inverting colors of the Smooth map (Roughness).")
-                # Invert the color of the Smooth map here before proceeding
-                input_paths["Smooth"] = self.invert_image(input_paths["Smooth"])
-    
-        # Get the export path
-        export_dir = self.path_button.cget("text")
-        if not os.path.isdir(export_dir):
-            print("⚠️ Invalid export path.")
-            return
-    
-        output_file = os.path.join(export_dir, "MaskMap.png")
-    
-        # Check if the file already exists and generate a unique name
-        output_file = self.get_unique_filename(output_file)
-    
-        try:
-            result = build_mask_map(input_paths, output_file)
-            if result:
-                messagebox.showinfo("Success", f"MaskMap successfully generated!\n{result}")
-        except Exception as e:
-            print("Error during build:", e)
-            messagebox.showerror("Error", f"An error occurred: {e}")
 
     def get_unique_filename(self, output_file):
         """
