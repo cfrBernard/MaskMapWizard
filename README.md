@@ -5,8 +5,8 @@ This is a simple Python app, designed to help you create Mask Maps by combining 
 [**Download the latest version here**](https://github.com/cfrBernard/MaskMapWizard/releases)
 
 [![Featured in Game Dev Digest](https://img.shields.io/badge/Featured%20in-Game%20Dev%20Digest%20%23292-blue?logo=unity&logoColor=white)](https://gamedevdigest.com/digests/issue-292-how-tos-indie-game-tips-and-more.html) <br>
-![Version](https://img.shields.io/badge/version-v0.2.0-blue)
-![License](https://img.shields.io/github/license/cfrBernard/MaskMapWizard)
+[![Version](https://img.shields.io/badge/version-v0.2.0-blue)](https://github.com/cfrBernard/MaskMapWizard/releases)
+[![License](https://img.shields.io/github/license/cfrBernard/MaskMapWizard)](./LICENSE.md)
 
 
 ## Features:
