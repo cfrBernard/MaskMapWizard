@@ -8,7 +8,7 @@
 
 1. Start with a base map texture.
 2. Use Materialize to generate your new textures (Metallic, AO, Smoothness).
-3. Drag and drop the generated textures into the Mask Map Wizard (from unity).
+3. Drag and drop the generated textures into the Mask Map Wizard.
 
 ---
 
